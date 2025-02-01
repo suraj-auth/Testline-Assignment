@@ -17,9 +17,10 @@ function App() {
   const [score, setScore] = useState(0);
   useEffect(() => {
     async function getdata() {
+      //"https://thingproxy.freeboard.io/fetch/https://api.jsonserve.com/Uw5CrX"
       try {
         const response = await fetch(
-          "https://thingproxy.freeboard.io/fetch/https://api.jsonserve.com/Uw5CrX"
+          "https://api.allorigins.win/get?url=https://api.jsonserve.com/Uw5CrX"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
