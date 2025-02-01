@@ -25,8 +25,9 @@ function App() {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
-        const data = await response.json();
-        console.log(data.contents);
+         const d = await response.json();
+        const data = JSON.parse(d.contents);
+        console.log(data);
         const shuffledQuestions = data.questions.sort(
           () => Math.random() - 0.5
         );
